@@ -9,8 +9,42 @@
 :root {
   --ui-alpha: #256EFF;
   --ui-beta: #46237A;
-  --ui-gamma: #3DDC97;
+  --ui-gamma: #91EAE4;
   --ui-delta: #FF495C;
-  --ui-white: #FCFCFC;
+  --ui-white: #FFF;
   --ui-black: #0C0910;
+  --ui-gray: #F0F0F0;
+}
+
+
+input {
+  border: none;
+  outline: none;
+}
+
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+// Custom scroll bar
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ui-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ui-delta);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ui-delta);
 }
