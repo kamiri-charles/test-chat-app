@@ -1,0 +1,94 @@
+.sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    form {
+        width: 80%;
+        height: 600px;
+        background: var(--ui-gamma);
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background: var(--ui-white);
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+
+            .title {
+                text-align: center;
+                font-family: 'Edu NSW ACT Foundation', sans-serif;
+                font-size: 25px;
+                text-decoration: underline;
+            }
+
+            .input-box {
+                position: relative;
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                label {
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                    transition: all 0.3s ease;
+
+                    &.active {
+                        top: -20px;
+                        left: 0;
+                        font-size: 13px;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    background: transparent;
+                    border-bottom: 1px solid var(--ui-black);
+                    padding: 5px 10px;
+                    z-index: 1;
+                }
+            }
+
+            button {
+                width: 120px;
+                height: 40px;
+                background: var(--ui-black);
+                color: var(--ui-white);
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: var(--ui-white);
+                    color: var(--ui-black);
+                    border: 1px solid var(--ui-black);
+                }
+            }
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            height: 100%;
+            background: var(--ui-white);
+            border-radius: 10px;
+            color: black;
+        }
+
+    }
+}
