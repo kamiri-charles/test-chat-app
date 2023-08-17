@@ -1,13 +1,19 @@
-import Navbar from './components/Navbar';
-import ChatWrapper from './components/ChatWrapper';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import 'boxicons/css/boxicons.min.css';
 import './App.scss';
+import SignIn from './components/SignIn';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <ChatWrapper />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/sign-in' element={<SignIn />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

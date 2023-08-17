@@ -30,6 +30,11 @@ input {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.home {
+  display: flex;
+  width: 100vw;
+}
+
 // Custom scroll bar
 ::-webkit-scrollbar {
   width: 3px;
