@@ -3,6 +3,7 @@ import 'boxicons/css/boxicons.min.css';
 import './App.scss';
 import SignIn from './components/SignIn';
 import Home from './components/Home';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/sign-up' element={<SignUp />} />
         </Routes>
       </Router>
     </div>

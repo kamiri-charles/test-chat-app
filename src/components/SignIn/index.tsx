@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './styles.scss';
 import { sign_in } from './sign_in';
 
 const SignIn: React.FC = () => {
@@ -9,7 +8,6 @@ const SignIn: React.FC = () => {
   return (
     <div className='sign-in'>
         <form>
-
             <div className="main">
                 <div className="title">Sign in to your account</div>
                 <div className="input-box">
@@ -33,6 +31,11 @@ const SignIn: React.FC = () => {
                     onClick={() => sign_in(data)}>
                         Log in
                 </button>
+
+                <div className="other">
+                    <div>Don't have an account?</div>
+                    <button>Create Account</button>
+                </div>
             </div>
 
             <div className="info">Note</div>
