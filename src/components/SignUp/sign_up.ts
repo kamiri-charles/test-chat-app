@@ -7,6 +7,6 @@ export const sign_up = (data: { firstname: string, lastname: string, email: stri
     body: JSON.stringify(data),
   })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => localStorage.setItem('tca_data', data))
     .catch(err => console.log(err));
 };

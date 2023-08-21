@@ -67,7 +67,7 @@ input {
 
     form {
         width: 80%;
-        height: 600px;
+        height: 650px;
         background: transparent;
         border-radius: 10px;
         padding: 20px;
@@ -102,7 +102,7 @@ input {
 
                 label {
                     position: absolute;
-                    top: 0;
+                    top: 10px;
                     left: 10px;
                     transition: all 0.3s ease;
 
@@ -117,8 +117,15 @@ input {
                     width: 100%;
                     background: transparent;
                     border-bottom: 1px solid var(--ui-black);
-                    padding: 5px 10px;
+                    padding: 10px;
                     z-index: 1;
+                    transition: all 0.3s ease;
+
+                    &.active {
+                      background: var(--ui-gray);
+                      border: none;
+                      border-radius: 3px;
+                    }
                 }
             }
 
@@ -145,7 +152,7 @@ input {
               justify-content: space-around;
               border-top: 1px solid black;
               width: 60%;
-              
+              height: 100px;
             }
         }
 
