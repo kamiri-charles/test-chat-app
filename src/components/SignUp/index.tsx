@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { sign_up } from './sign_up';
 
 const SignUp: React.FC = () => {
 
-    const  [data, setData] = React.useState({first_name: '', last_name: '', username: '', password: ''});
+    const  [data, setData] = React.useState({firstname: '', lastname: '', email: '', username: '', password: ''});
 
   return (
     <div className="sign-up">
@@ -14,10 +14,10 @@ const SignUp: React.FC = () => {
           <div className="input-box">
             <input
               type="text"
-              value={data.first_name}
-              onChange={(e) => setData({ ...data, first_name: e.target.value })}
+              value={data.firstname}
+              onChange={(e) => setData({ ...data, firstname: e.target.value })}
             />
-            <label className={data.first_name.length !== 0 ? "active" : ""}>
+            <label className={data.firstname.length !== 0 ? "active" : ""}>
               First name (optional)
             </label>
           </div>
@@ -25,11 +25,22 @@ const SignUp: React.FC = () => {
           <div className="input-box">
             <input
               type="text"
-              value={data.last_name}
-              onChange={(e) => setData({ ...data, last_name: e.target.value })}
+              value={data.lastname}
+              onChange={(e) => setData({ ...data, lastname: e.target.value })}
             />
-            <label className={data.last_name.length !== 0 ? "active" : ""}>
+            <label className={data.lastname.length !== 0 ? "active" : ""}>
               Last name (optional)
+            </label>
+          </div>
+
+          <div className="input-box">
+            <input
+              type="email"
+              value={data.email}
+              onChange={(e) => setData({ ...data, email: e.target.value })}
+            />
+            <label className={data.email.length !== 0 ? "active" : ""}>
+              Email (optional)
             </label>
           </div>
 
@@ -56,7 +67,10 @@ const SignUp: React.FC = () => {
             </label>
           </div>
 
-          <button type="submit" onClick={() => sign_up(data)}>
+          <button type="submit" onClick={e => {
+            e.preventDefault();
+            sign_up(data);
+            }}>
             Create Account
           </button>
 

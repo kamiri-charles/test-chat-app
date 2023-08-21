@@ -20,6 +20,8 @@ const ChatWrapper: React.FC = () => {
 
       <div className="mid">
         <Message />
+        <Message />
+        <Message />
       </div>
 
       <div className="bottom">
