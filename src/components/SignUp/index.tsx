@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { sign_up } from './sign_up';
 import { ImpulseSpinner } from "react-spinners-kit";
@@ -22,6 +22,11 @@ const SignUp: React.FC = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    // If the user is logged in, redirect to the home page
+    if (localStorage.getItem('tca_data')) nav('/');
+  })
 
   return (
     <div className="sign-up">

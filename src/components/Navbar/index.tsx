@@ -1,8 +1,17 @@
 import React from 'react';
-import './styles.scss';
+import { useNavigate } from 'react-router-dom';
 import { Chat } from './Chat';
+import './styles.scss';
 
 const Navbar: React.FC = () => {
+
+  let nav = useNavigate();
+
+  let sign_out = () => {
+    localStorage.removeItem('tca_data');
+    nav('/sign-in');
+  };
+
   return (
     <div className='navbar'>
 
@@ -23,7 +32,7 @@ const Navbar: React.FC = () => {
       <div className="options">
         <i className="bx bx-user"></i>
         <i className="bx bx-cog"></i>
-        <i className="bx bx-exit"></i>
+        <i className="bx bx-exit" onClick={sign_out}></i>
       </div>
       
     </div>
