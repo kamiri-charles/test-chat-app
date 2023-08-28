@@ -14,14 +14,15 @@ const SignUp: React.FC = () => {
     try {
       setLoading(true);
       await sign_up(data);
+      nav('/');
     } catch (error) {
       alert("There was an error creating your account.");
       console.log(error);
     } finally {
       setLoading(false);
-      nav('/');
     }
-  }
+  };
+
   return (
     <div className="sign-up">
       <form>

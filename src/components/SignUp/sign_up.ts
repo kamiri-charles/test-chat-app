@@ -1,5 +1,5 @@
 export const sign_up = (data: { firstname: string, lastname: string, email: string, username: string; password: string }) => {
-  fetch("https://tca-backend.azurewebsites.net/api/users", {
+  fetch("https://tca-backend.azurewebsites.net/api/users/sign-up", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
