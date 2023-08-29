@@ -6,6 +6,19 @@
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
     position: relative;
 
+    .default {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 50px;
+        }
+    }
+
     .top {
         position: absolute;
         top: 0;

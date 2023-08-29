@@ -21,7 +21,7 @@ const SignIn: React.FC = () => {
             console.log(error);
         } finally {
             setLoading(false);
-            }
+        }
     };
 
     useEffect(() => {
