@@ -1,21 +1,29 @@
 import React from 'react';
 import './styles.scss';
 import { Message } from './Message';
+import { Default } from './Default';
 
-const ChatWrapper: React.FC = () => {
+interface ChatWrapperProps {
+  data: []
+};
+
+const ChatWrapper: React.FC<ChatWrapperProps> = ({data}) => {
+
   return (
     <div className='chat-wrapper'>
-      <div className='top'>
-        <div className='image'></div>
+      {data.length !== 0 ? (
+        <>
+        <div className='top'>
+          <div className='image'></div>
 
-        <div className='details'>Charles Kamiri</div>
+          <div className='details'>Charles Kamiri</div>
 
-        <div className='icons'>
-          <i className='bx bx-phone'></i>
-          <i className='bx bx-video'></i>
-          <i className='bx bx-link-alt'></i>
-          <i className='bx bx-dots-vertical-rounded'></i>
-        </div>
+          <div className='icons'>
+            <i className='bx bx-phone'></i>
+            <i className='bx bx-video'></i>
+            <i className='bx bx-link-alt'></i>
+            <i className='bx bx-dots-vertical-rounded'></i>
+          </div>
       </div>
 
       <div className="mid">
@@ -31,6 +39,8 @@ const ChatWrapper: React.FC = () => {
           <i className='bx bx-send'></i>
         </div>
       </div>
+        </>
+      ): <Default />}
     </div>
   );
 };

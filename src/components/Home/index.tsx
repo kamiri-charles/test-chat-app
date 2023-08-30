@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   return (
     <div className='home'>
         <Navbar />
-        <ChatWrapper />
+        <ChatWrapper data={[]} />
     </div>
   )
 }
