@@ -47,7 +47,15 @@
         }
     }
 
-    .chats {
+    .navbar-empty {
+        height: 40%;
+        display: grid;
+        place-items: center;
+        font-family: 'Edu NSW ACT Foundation', cursive;
+        font-size: 20px;
+    }
+
+    .conversations {
         height: calc(100% - 120px);
         overflow-y: scroll;
         scroll-behavior: smooth;

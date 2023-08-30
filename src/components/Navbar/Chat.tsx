@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-export const Chat: React.FC = () => {
+interface ChatProps {
+  data: any,
+};
+
+export const Chat: React.FC<ChatProps> = () => {
   return (
     <div className='chat'>
         <div className='image'></div>

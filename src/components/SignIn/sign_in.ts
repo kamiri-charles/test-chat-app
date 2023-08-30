@@ -7,6 +7,6 @@ export const sign_in = (data: { username: string; password: string; }) => {
         body: JSON.stringify(data)
     })
         .then(res => res.json())
-        .then(data => localStorage.setItem('tca_data', data))
+        .then(data => localStorage.setItem('tca_data', JSON.stringify(data)))
         .catch(err => console.log(err));
 };

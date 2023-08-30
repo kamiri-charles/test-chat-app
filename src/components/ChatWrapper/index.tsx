@@ -4,7 +4,7 @@ import { Message } from './Message';
 import { Default } from './Default';
 
 interface ChatWrapperProps {
-  data: []
+  data: any[]
 };
 
 const ChatWrapper: React.FC<ChatWrapperProps> = ({data}) => {
