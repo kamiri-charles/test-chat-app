@@ -10,3 +10,4 @@ export const sign_up = (data: { firstname: string, lastname: string, email: stri
     .then(data => localStorage.setItem('tca_data', JSON.stringify(data)))
     .catch(err => console.log(err));
 };
+
